@@ -325,11 +325,16 @@ p {
 
 .decorative-star {
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: .75rem;
+  height: .75rem;
   fill: currentColor;
   vertical-align: -.125em;
   flex-shrink: 0;
+}
+
+.little-star .decorative-star {
+  width: 1rem;
+  height: 1rem;
 }
 
 .little-star {
