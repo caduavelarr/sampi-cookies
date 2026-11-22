@@ -323,6 +323,15 @@ p {
   margin-bottom: 22px
 }
 
+.decorative-star {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -.125em;
+  flex-shrink: 0;
+}
+
 .little-star {
   font-size: 1.7em;
   vertical-align: middle;
