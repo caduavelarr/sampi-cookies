@@ -63,7 +63,7 @@ Essa é uma conferência inicial, não uma auditoria completa. Ainda faltam revi
 O formulário prepara uma mensagem no próprio navegador. Não há envio, banco de dados ou armazenamento dos campos. O WhatsApp de encomendas é +55 (61) 98212-3090, configurado em `SAMPI_WHATSAPP` em `script.js`. O usuário pode abrir a mensagem no WhatsApp e confirmar o envio lá. Nunca colocar credenciais neste arquivo.
 
 - Número de WhatsApp recebido e configurado; conferir o atendimento com a marca antes da publicação final.
-- Confirmar os valores dos mini cookies e o limite de 80 unidades. Até lá, aparecem sob consulta.
+- Mini cookies de 20 g: até 80 unidades, R$ 3,00 por unidade; a partir de 81 unidades, R$ 3,50 por unidade. Valores confirmados pelo responsável pelo projeto.
 - Confirmar pagamento, antecedência, regiões de entrega e retirada. Não publicar essas suposições como regras da marca.
 - Solicitar ingredientes completos, alergênicos e conservação. As descrições dos sabores não substituem essas informações.
 - Confirmar a correspondência das fotos com cada sabor. Algumas imagens são composições ou ilustrações visuais de recheios; os textos alternativos explicitam isso.

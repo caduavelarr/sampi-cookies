@@ -76,7 +76,7 @@ const products = [
   { name: 'M&M', category: 'individuais', price: 7.5, description: 'Massa tradicional com M&M e chocolate meio amargo.', image: 'cookies-com-confeitos-coloridos.jpeg', alt: 'Cookies com confeitos coloridos e pedaços de chocolate', tag: '60 g' },
   { name: 'Nutella', category: 'individuais', price: 9, description: 'Massa tradicional com chocolate meio amargo e recheio de Nutella.', image: 'cookie-recheado-chocolate-cremoso-01.jpeg', alt: 'Foto ilustrativa de cookie com recheio cremoso de chocolate', tag: 'Recheado · 60 g' },
   { name: 'Kinder', category: 'individuais', price: 9, description: 'Massa tradicional com chocolate branco e meio amargo, recheada com creme Bueno.', image: 'cookie-partido-recheio-claro.jpeg', alt: 'Foto ilustrativa de cookie partido com recheio claro', tag: 'Recheado · 60 g' },
-  { name: 'Mini cookies', category: 'mini', description: 'Tradicional, Eclipse, Red Velvet e M&M. Cookies de 20 g para festas e eventos. Consulte valores e quantidades.', image: 'mini-cookies-com-chocolate.jpeg', alt: 'Mini cookies com pedaços de chocolate', tag: 'Para compartilhar · 20 g' },
+  { name: 'Mini cookies', category: 'mini', priceLabel: 'A partir de R$ 3,00', description: 'Tradicional, Eclipse, Red Velvet e M&M. Cookies de 20 g para festas e eventos. Até 80 unidades: R$ 3,00 por unidade. A partir de 81 unidades: R$ 3,50 por unidade.', image: 'mini-cookies-com-chocolate.jpeg', alt: 'Mini cookies com pedaços de chocolate', tag: 'Para compartilhar · 20 g' },
   { name: 'Cesta de cookies', category: 'cestas', description: 'Encomendas a partir de 10 cookies, com todos os sabores disponíveis. Monte sua combinação e consulte o valor.', image: 'caixa-presente-cookies-02.jpeg', alt: 'Caixa para presente com cookies embalados e laço', tag: 'A partir de 10 cookies' }
 ];
 const catalog = document.querySelector('#catalogo');
@@ -97,7 +97,7 @@ function renderProducts() {
     imageWrap.append(image, tag);
     const title = document.createElement('div'); title.className = 'product-title';
     const name = document.createElement('h3'); name.textContent = product.name;
-    const price = document.createElement('span'); price.className = 'product-price'; price.textContent = product.price ? currency.format(product.price) : 'Sob consulta';
+    const price = document.createElement('span'); price.className = 'product-price'; price.textContent = product.priceLabel || (product.price ? currency.format(product.price) : 'Sob consulta');
     title.append(name, price);
     const description = document.createElement('p'); description.textContent = product.description;
     const link = document.createElement('a'); link.className = 'text-link'; link.href = '#contato'; link.textContent = 'Quero esse'; link.setAttribute('aria-label', `Consultar ${product.name}`);
