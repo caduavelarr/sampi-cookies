@@ -610,6 +610,7 @@ textarea::placeholder {
 
 .product-image-wrap img {
   width: 100%;
+  height: auto;
   aspect-ratio: 1.22;
   object-fit: cover;
   transition: transform .4s
@@ -692,6 +693,7 @@ textarea::placeholder {
 
 .about-art img {
   width: 100%;
+  height: auto;
   max-height: 500px;
   object-fit: cover;
   object-position: center;
@@ -730,6 +732,7 @@ textarea::placeholder {
 
 .occasion-grid img {
   width: 100%;
+  height: auto;
   aspect-ratio: 1.2;
   object-fit: cover;
   border-radius: 120px 120px 6px 6px;

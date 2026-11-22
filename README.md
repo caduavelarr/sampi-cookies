@@ -58,6 +58,12 @@ Também passaram a verificação de sintaxe do JavaScript, os caminhos locais de
 
 Essa é uma conferência inicial, não uma auditoria completa. Ainda faltam revisão de todas as seções em diferentes telas, zoom do navegador, tecnologia assistiva e conferência final do conteúdo com a marca.
 
+### Conferência no Opera GX
+
+Em 22/11/2026, a prévia local também foi conferida no Inspecionar Elementos do Opera GX, em 320, 393, 768 e 1261 pixels de largura. Foram exercitados busca por Nutella, categorias de cookies, minis e cestas, navegação para contato a partir de um produto, preparação da mensagem e conferência do link gerado para o WhatsApp, troca de tema, aumento de texto, carrossel e login demonstrativo. Nenhuma mensagem foi enviada ao WhatsApp.
+
+A conferência identificou fotos de cartões excessivamente altas em telas estreitas; a altura passou a acompanhar a proporção definida no CSS. As imagens estáticas com carregamento adiado receberam dimensões explícitas para ajudar a reservar espaço no layout. O console não apresentou erros nos fluxos observados; permaneceu um aviso informativo sobre dimensões de imagem com carregamento adiado. A emulação não substitui testes em aparelhos reais nem uma auditoria completa de acessibilidade.
+
 ## Contato e dados pendentes
 
 O formulário prepara uma mensagem no próprio navegador. Não há envio, banco de dados ou armazenamento dos campos. O WhatsApp de encomendas é +55 (61) 98212-3090, configurado em `SAMPI_WHATSAPP` em `script.js`. O usuário pode abrir a mensagem no WhatsApp e confirmar o envio lá. Nunca colocar credenciais neste arquivo.
