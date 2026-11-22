@@ -43,14 +43,14 @@ Elas explicaram que escolheram as cores por gostarem delas e por associarem esse
 6. Construção das seções com HTML semântico e inclusão integral do texto original de “Sobre nós”.
 7. Implementação do CSS responsivo e dos temas claro e escuro.
 8. Implementação das interações em JavaScript, sem frameworks ou dependências de execução.
-9. Revisão funcional e visual local; registrar os resultados efetivamente verificados no histórico do projeto.
-10. Próximas etapas: confirmar dados pendentes, publicar pelo GitHub e registrar o endereço público e capturas finais no relatório.
+9. Revisão funcional e visual da prévia local, com registro dos testes e correção dos problemas encontrados.
+10. Publicação no GitHub Pages e atualização do repositório com os ajustes realizados.
 
 ## Recursos de acessibilidade
 
 Link para pular ao conteúdo, foco visível, rótulos de campos, textos alternativos, navegação das abas por setas/Home/End, carrossel manual com botões identificados, mensagens de resultado, aumento de texto e troca de tema. As preferências de tema e tamanho são armazenadas localmente quando permitido pelo navegador. O layout respeita a preferência por movimento reduzido.
 
-Esses recursos não constituem certificação WCAG. A avaliação documentada de contraste, teclado, zoom e demais critérios ainda deve integrar a revisão final.
+O projeto possui verificações iniciais de contraste e navegação por teclado. Ainda não foi realizada uma auditoria completa de conformidade com as WCAG.
 
 ## Verificação da primeira versão
 
@@ -76,13 +76,13 @@ A conferência identificou fotos de cartões excessivamente altas em telas estre
 
 ## Contato e dados pendentes
 
-O formulário prepara uma mensagem no próprio navegador. Não há envio, banco de dados ou armazenamento dos campos. O WhatsApp de encomendas é +55 (61) 98212-3090, configurado em `SAMPI_WHATSAPP` em `script.js`. O usuário pode abrir a mensagem no WhatsApp e confirmar o envio lá. Nunca colocar credenciais neste arquivo.
+O formulário prepara uma mensagem no próprio navegador. Não há envio, banco de dados ou armazenamento dos campos. O WhatsApp de encomendas é +55 (61) 98212-3090, configurado em `SAMPI_WHATSAPP` em `script.js`. O usuário pode abrir a mensagem no WhatsApp e confirmar o envio lá.
 
-- Número de WhatsApp recebido e configurado; conferir o atendimento com a marca antes da publicação final.
-- Mini cookies de 20 g: até 80 unidades, R$ 3,00 por unidade; a partir de 81 unidades, R$ 3,50 por unidade. Valores confirmados pelo responsável pelo projeto.
-- Confirmar pagamento, antecedência, regiões de entrega e retirada. Não publicar essas suposições como regras da marca.
-- Solicitar ingredientes completos, alergênicos e conservação. As descrições dos sabores não substituem essas informações.
-- Confirmar a correspondência das fotos com cada sabor. Algumas imagens são composições ou ilustrações visuais de recheios; os textos alternativos explicitam isso.
+- Recebi o número de WhatsApp para encomendas e ele já está configurado no site.
+- Confirmei os preços dos mini cookies de 20 g: até 80 unidades, R$ 3,00 por unidade; a partir de 81 unidades, R$ 3,50 por unidade.
+- As informações de pagamento, antecedência, regiões de entrega e retirada ainda estão em confirmação com as fundadoras.
+- A lista completa de ingredientes, alergênicos e as orientações de conservação ainda estão pendentes. As descrições disponíveis apresentam os sabores.
+- Aguardo as fotos específicas de cada sabor. Nesta versão, algumas imagens são composições ou ilustrações visuais de recheios, identificadas nos textos alternativos.
 
 ## Login de demonstração
 
