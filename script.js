@@ -1,8 +1,7 @@
 'use strict';
 
-// Preencher apenas com o número autorizado, no formato 55 + DDD + número.
-// Exemplo de formato: 5511999999999. Não há número real configurado nesta versão.
-const SAMPI_WHATSAPP = '';
+// Número de encomendas informado pela Sampi: país + DDD + número, só dígitos.
+const SAMPI_WHATSAPP = '5561982123090';
 
 const storage = {
   get(key) { try { return localStorage.getItem(key); } catch { return null; } },
@@ -138,7 +137,6 @@ document.querySelectorAll('[data-jump-category]').forEach(link => link.addEventL
 renderProducts();
 
 const whatsappReady = /^55\d{10,11}$/.test(SAMPI_WHATSAPP);
-if (whatsappReady && document.querySelector('#contact-availability')) document.querySelector('#contact-availability').textContent = 'Disponibilidade, pagamento e entrega ou retirada são combinados diretamente no atendimento.';
 document.querySelector('#contact-form')?.addEventListener('submit', event => {
   event.preventDefault();
   const form = event.currentTarget;

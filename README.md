@@ -60,9 +60,9 @@ Essa é uma conferência inicial, não uma auditoria completa. Ainda faltam revi
 
 ## Contato e dados pendentes
 
-O formulário prepara uma mensagem no próprio navegador. Não há envio, banco de dados ou armazenamento dos campos. Após configurar `SAMPI_WHATSAPP` em `script.js`, o usuário poderá abrir a mensagem no WhatsApp e confirmar o envio lá. Nunca colocar credenciais neste arquivo.
+O formulário prepara uma mensagem no próprio navegador. Não há envio, banco de dados ou armazenamento dos campos. O WhatsApp de encomendas é +55 (61) 98212-3090, configurado em `SAMPI_WHATSAPP` em `script.js`. O usuário pode abrir a mensagem no WhatsApp e confirmar o envio lá. Nunca colocar credenciais neste arquivo.
 
-- Confirmar o número de WhatsApp autorizado e preencher a constante com país, DDD e número, somente dígitos.
+- Número de WhatsApp recebido e configurado; conferir o atendimento com a marca antes da publicação final.
 - Confirmar os valores dos mini cookies e o limite de 80 unidades. Até lá, aparecem sob consulta.
 - Confirmar pagamento, antecedência, regiões de entrega e retirada. Não publicar essas suposições como regras da marca.
 - Solicitar ingredientes completos, alergênicos e conservação. As descrições dos sabores não substituem essas informações.
