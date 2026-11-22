@@ -25,8 +25,18 @@ Abra http://localhost:4173. Para encerrar, pressione Ctrl+C no terminal. O site 
 
 ## Processo de construção
 
+### Entrevista com as fundadoras
+
+Antes de começar o site, entrevistei as fundadoras da Sampi Cookies por meio de perguntas enviadas por mensagem. Quis conhecer a identidade da marca, os produtos e as informações necessárias para apresentar o negócio aos clientes.
+
+Perguntei sobre a paleta de cores e o motivo da escolha, os produtos oferecidos, os sabores e os preços. Também pedi um texto de apresentação da marca, depoimentos individuais sobre a experiência de empreender e materiais visuais, como logos e fotos dos produtos.
+
+Elas explicaram que escolheram as cores por gostarem delas e por associarem esses tons a doces. As respostas e os materiais recebidos orientaram o catálogo e a identidade visual do site. Decidi preservar o texto original de “Sobre nós”, escrito pelas próprias fundadoras. As fotos e os depoimentos individuais para a página “Quem faz a Sampi” ainda estão sendo aguardados.
+
+### Etapas do desenvolvimento
+
 1. Leitura dos requisitos do trabalho e planejamento das entregas.
-2. Levantamento de catálogo, preços, identidade visual e canais de atendimento com as fundadoras.
+2. Entrevista com as fundadoras e levantamento de catálogo, preços, identidade visual e canais de atendimento.
 3. Recebimento e conferência das seis versões oficiais da logo.
 4. Inspeção e renomeação de 19 fotografias para facilitar sua manutenção.
 5. Definição de um layout com cores inspiradas na marca: creme, marrom e coral. Cores de texto e superfície foram adaptadas para legibilidade.
@@ -80,17 +90,17 @@ E-mail: `visitante@example.com`. Senha fictícia: `sampi-demo`. Não cria conta,
 
 ## GitHub e publicação
 
-O projeto é estático e pode ser publicado no GitHub Pages a partir da raiz da branch escolhida. As alterações devem receber commits por etapas reais de desenvolvimento. Após criar/conectar o repositório no GitHub, configurar Pages nas opções do repositório e conferir os caminhos e o link público.
+Organizei o versionamento no GitHub, com commits que registram as etapas de construção e os ajustes do site. A publicação utiliza o GitHub Pages.
+
+- Repositório: https://github.com/caduavelarr/sampi-cookies
+- Site: https://caduavelarr.github.io/sampi-cookies/
 
 ## Ferramentas e autoria
 
-HTML, CSS, JavaScript, Node.js para prévia local e Codex/OpenAI como apoio à organização, implementação e revisão. Logos, fotos, catálogo e texto “Sobre nós” foram fornecidos pelo responsável pelo projeto e pelas fundadoras. O arquivo do Canva foi informado como origem das logos.
+Utilizei HTML, CSS e JavaScript no site e Node.js para a prévia local, com apoio do Codex/OpenAI na organização, implementação e revisão. As fundadoras forneceram as logos, as fotos, as informações do catálogo e o texto “Sobre nós”. Recebi as versões das logos a partir do material da marca no Canva.
 
-O relatório deve registrar as ferramentas e IAs realmente utilizadas. A redação da Parte C deve ser escrita pelo aluno sem IA, conforme o enunciado. Não há redação dessa parte neste repositório.
-
-## Fontes a consultar para o relatório
+## Referências
 
 - WCAG, W3C: https://www.w3.org/WAI/standards-guidelines/wcag/
 - Heurísticas de usabilidade, Nielsen Norman Group: https://www.nngroup.com/articles/ten-usability-heuristics/
 
-Esses links são pontos de partida; a pesquisa, suas datas de acesso e as conclusões aplicadas ao site precisam ser registradas no relatório.
