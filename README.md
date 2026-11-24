@@ -4,24 +4,17 @@ Site de apresentação e catálogo da Sampi Cookies, desenvolvido para o projeto
 
 ## Executar localmente
 
-Requer Node.js para o servidor de prévia, sem instalar pacotes. Na pasta do projeto:
-
-```sh
-node server.cjs
-```
-
-Abra http://localhost:4173. Para encerrar, pressione Ctrl+C no terminal. O site também funciona abrindo `index.html`, mas o servidor é recomendado para a revisão.
+Para visualizar o projeto no computador, utilizo a extensão Live Server do Visual Studio Code, abrindo o arquivo `index.html` com a opção “Open with Live Server”. Também é possível abrir o arquivo diretamente no navegador. O site não precisa de instalação de pacotes.
 
 ## Estrutura
 
 - `index.html`: início, carrossel, catálogo, história da marca, encomendas, contato e rodapé.
+- `quem-faz-a-sampi.html`: fotos e depoimentos de Julia Barreto e Giovana Cavalini, com acesso pela seção “Sobre nós”.
 - `login.html`: demonstração acadêmica de acesso, sem autenticação real.
 - `styles.css`: layout responsivo, temas e estilos de acessibilidade.
 - `script.js`: catálogo, busca, abas, carrossel, preferências e validação dos formulários.
 - `imagens/`: fotografias fornecidas pela marca.
 - `logos/julini/`: seis versões oficiais da logo.
-- `renomeacao-imagens.csv`: correspondência entre os nomes originais e descritivos das fotos.
-- `server.cjs`: servidor HTTP local de desenvolvimento, limitado ao próprio computador.
 
 ## Processo de construção
 
@@ -31,7 +24,7 @@ Antes de começar o site, entrevistei as fundadoras da Sampi Cookies por meio de
 
 Perguntei sobre a paleta de cores e o motivo da escolha, os produtos oferecidos, os sabores e os preços. Também pedi um texto de apresentação da marca, depoimentos individuais sobre a experiência de empreender e materiais visuais, como logos e fotos dos produtos.
 
-Elas explicaram que escolheram as cores por gostarem delas e por associarem esses tons a doces. As respostas e os materiais recebidos orientaram o catálogo e a identidade visual do site. Decidi preservar o texto original de “Sobre nós”, escrito pelas próprias fundadoras. As fotos e os depoimentos individuais para a página “Quem faz a Sampi” ainda estão sendo aguardados.
+Elas explicaram que escolheram as cores por gostarem delas e por associarem esses tons a doces. As respostas e os materiais recebidos orientaram o catálogo e a identidade visual do site. Decidi preservar o texto original de “Sobre nós”, escrito pelas próprias fundadoras. Com as fotos e os depoimentos individuais recebidos, acrescentei a página “Quem faz a Sampi”, mantendo os relatos originais de Julia Barreto e Giovana Cavalini.
 
 ### Etapas do desenvolvimento
 
@@ -45,6 +38,7 @@ Elas explicaram que escolheram as cores por gostarem delas e por associarem esse
 8. Implementação das interações em JavaScript, sem frameworks ou dependências de execução.
 9. Revisão funcional e visual da prévia local, com registro dos testes e correção dos problemas encontrados.
 10. Publicação no GitHub Pages e atualização do repositório com os ajustes realizados.
+11. Inclusão da página “Quem faz a Sampi”, com fotos, depoimentos das fundadoras e um link na seção “Sobre nós”.
 
 ## Recursos de acessibilidade
 
@@ -97,7 +91,7 @@ Organizei o versionamento no GitHub, com commits que registram as etapas de cons
 
 ## Ferramentas e autoria
 
-Utilizei HTML, CSS e JavaScript no site e Node.js para a prévia local, com apoio do Codex/OpenAI na organização, implementação e revisão. As fundadoras forneceram as logos, as fotos, as informações do catálogo e o texto “Sobre nós”. Recebi as versões das logos a partir do material da marca no Canva.
+Utilizei HTML, CSS e JavaScript no site, com apoio do Codex/OpenAI na organização, implementação e revisão. Nos testes iniciais, também utilizei Node.js para a prévia local; atualmente, uso o Live Server. As fundadoras forneceram as logos, as fotos, as informações do catálogo, o texto “Sobre nós” e os depoimentos individuais. Recebi as versões das logos a partir do material da marca no Canva.
 
 ## Referências
 
