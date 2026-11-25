@@ -39,12 +39,11 @@ Elas explicaram que escolheram as cores por gostarem delas e por associarem esse
 9. Revisão funcional e visual da prévia local, com registro dos testes e correção dos problemas encontrados.
 10. Publicação no GitHub Pages e atualização do repositório com os ajustes realizados.
 11. Inclusão da página “Quem faz a Sampi”, com fotos, depoimentos das fundadoras e um link na seção “Sobre nós”.
+12. Revisão dos arquivos, consolidação dos estilos da busca e correções no formulário de contato e nos rótulos dos controles.
 
 ## Recursos de acessibilidade
 
 Link para pular ao conteúdo, foco visível, rótulos de campos, textos alternativos, navegação das abas por setas/Home/End, carrossel manual com botões identificados, mensagens de resultado, aumento de texto e troca de tema. As preferências de tema e tamanho são armazenadas localmente quando permitido pelo navegador. O layout respeita a preferência por movimento reduzido.
-
-O projeto possui verificações iniciais de contraste e navegação por teclado. Ainda não foi realizada uma auditoria completa de conformidade com as WCAG.
 
 ## Verificação da primeira versão
 
@@ -68,6 +67,14 @@ Em 22/11/2026, a prévia local também foi conferida no Inspecionar Elementos do
 
 A conferência identificou fotos de cartões excessivamente altas em telas estreitas; a altura passou a acompanhar a proporção definida no CSS. As imagens estáticas com carregamento adiado receberam dimensões explícitas para ajudar a reservar espaço no layout. O console não apresentou erros nos fluxos observados; permaneceu um aviso informativo sobre dimensões de imagem com carregamento adiado. A emulação não substitui testes em aparelhos reais nem uma auditoria completa de acessibilidade.
 
+### Revisão dos arquivos
+
+Em 24/11/2026, revisei a estrutura das três páginas e as referências a arquivos, imagens e seções. Consolidei regras repetidas do campo de busca, corrigi descrições de fotos que haviam sido trocadas e separei o rótulo da senha do botão “Mostrar”. Os botões dos produtos mantêm o texto “Quero esse” também na identificação para leitores de tela.
+
+O formulário passou a limpar a prévia ao editar os campos ou escolher outro produto, evitando que o link do WhatsApp continue com uma mensagem anterior. Também retirei a saudação repetida da mensagem preenchida pelos cartões. Os fluxos foram verificados em testes automatizados, sem envio de mensagens.
+
+As bordas dos controles receberam cores próprias, separadas das linhas decorativas. Nas combinações avaliadas, o contraste das bordas ficou entre 3,30:1 e 3,70:1 no tema claro e entre 3,17:1 e 3,93:1 no tema escuro. A seta do seletor também acompanha o tema. As três páginas utilizam as mesmas versões do CSS e do JavaScript nas referências de carregamento.
+
 ## Contato e dados pendentes
 
 O formulário prepara uma mensagem no próprio navegador. Não há envio, banco de dados ou armazenamento dos campos. O WhatsApp de encomendas é +55 (61) 98212-3090, configurado em `SAMPI_WHATSAPP` em `script.js`. O usuário pode abrir a mensagem no WhatsApp e confirmar o envio lá.
@@ -76,7 +83,9 @@ O formulário prepara uma mensagem no próprio navegador. Não há envio, banco 
 - Confirmei os preços dos mini cookies de 20 g: até 80 unidades, R$ 3,00 por unidade; a partir de 81 unidades, R$ 3,50 por unidade.
 - As informações de pagamento, antecedência, regiões de entrega e retirada ainda estão em confirmação com as fundadoras.
 - A lista completa de ingredientes, alergênicos e as orientações de conservação ainda estão pendentes. As descrições disponíveis apresentam os sabores.
-- Aguardo as fotos específicas de cada sabor. Nesta versão, algumas imagens são composições ou ilustrações visuais de recheios, identificadas nos textos alternativos.
+- Atualizei as fotos de Tradicional, Red Velvet e Nutella. O Eclipse ainda utiliza uma composição de produtos, identificada no texto alternativo. A alternância entre duas fotos de cada sabor permanece planejada para quando o conjunto de imagens estiver completo.
+
+As pastas de imagens e logos também guardam materiais de reserva fornecidos pela marca, que não estão todos em exibição. Não foram encontrados arquivos de imagem idênticos na revisão.
 
 ## Login de demonstração
 

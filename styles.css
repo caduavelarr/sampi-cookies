@@ -8,6 +8,7 @@
   --ink: #4b3027;
   --coral: #ff8b83;
   --line: #d8c7b1;
+  --control-border: #9a806b;
   --muted: #705c4d;
   --surface: #ffffff;
   --ribbon: #ff8b83;
@@ -24,6 +25,7 @@
   --ink: #fff0d6;
   --coral: #ff9b93;
   --line: #695044;
+  --control-border: #8b7464;
   --muted: #d4bfb0;
   --surface: #382922;
   --ribbon: #6e3b35;
@@ -77,7 +79,8 @@ a {
 }
 
 button {
-  cursor: pointer
+  cursor: pointer;
+  color: inherit
 }
 
 img {
@@ -93,10 +96,6 @@ select:focus-visible,
 [tabindex]:focus-visible {
   outline: 3px solid var(--focus);
   outline-offset: 5px
-}
-
-button {
-  color: inherit
 }
 
 h1,
@@ -240,7 +239,7 @@ p {
   height: 44px;
   flex-shrink: 0;
   padding: 9px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--control-border);
   border-radius: 50%;
   background: transparent;
   color: var(--ink);
@@ -296,7 +295,7 @@ p {
   width: 100%;
   text-align: left;
   background: var(--paper);
-  border: 1px solid var(--line);
+  border: 1px solid var(--control-border);
   margin-top: 8px;
   border-radius: 6px
 }
@@ -494,7 +493,7 @@ p {
 .carousel-controls button {
   width: 42px;
   height: 42px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--control-border);
   background: none;
   border-radius: 50%;
   font-size: 1.6rem;
@@ -556,7 +555,7 @@ p {
 }
 
 .tabs button {
-  border: 1px solid var(--line);
+  border: 1px solid var(--control-border);
   background: transparent;
   padding: 10px 18px;
   border-radius: 30px;
@@ -578,9 +577,14 @@ p {
 .search-field {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--brown);
-  gap: 12px;
-  max-width: 270px
+  width: 270px;
+  max-width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  gap: 10px;
+  border: 1px solid var(--control-border);
+  border-radius: 8px;
+  background: var(--surface);
 }
 
 .search-field>span:first-child {
@@ -588,13 +592,26 @@ p {
 }
 
 .search-field input {
+  flex: 1;
   width: 100%;
   min-width: 0;
+  min-height: 46px;
+  appearance: none;
   border: 0;
   background: none;
   color: var(--ink);
   padding: 10px 0;
   font-size: .9em
+}
+
+.search-field:focus-within {
+  border-color: var(--focus);
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.search-field input:focus-visible {
+  outline: none
 }
 
 input::placeholder,
@@ -811,7 +828,7 @@ form textarea {
   display: block;
   width: 100%;
   margin-top: 7px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--control-border);
   background: var(--paper);
   border-radius: 5px;
   padding: 12px 14px;
@@ -830,6 +847,10 @@ form select {
   background-repeat: no-repeat;
   background-position: right 12px center;
   padding-right: 40px
+}
+
+:root[data-theme="dark"] form select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='m5 7 5 5 5-5' fill='none' stroke='%23d4bfb0' stroke-width='2'/%3E%3C/svg%3E");
 }
 
 .form-help {
@@ -1118,10 +1139,18 @@ form select {
 
 .password-field {
   display: flex;
-  border: 1px solid var(--line);
+  border: 1px solid var(--control-border);
   background: var(--paper);
   border-radius: 5px;
   margin-top: 7px
+}
+
+.password-group {
+  margin-bottom: 18px;
+}
+
+.password-group label {
+  margin-bottom: 0;
 }
 
 .password-field input {
@@ -1143,39 +1172,6 @@ form select {
   text-align: center;
   padding: 24px;
   font-size: .8em
-}
-
-.search-field {
-  width: 270px;
-  max-width: 100%;
-  min-height: 48px;
-  padding: 0 14px;
-  gap: 10px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--surface);
-}
-
-.search-field:focus-within {
-  border-color: var(--focus);
-  outline: 2px solid var(--focus);
-  outline-offset: 3px;
-}
-
-.search-field input {
-  flex: 1;
-  min-height: 46px;
-  appearance: none
-}
-
-.search-field input:focus-visible {
-  outline: none
-}
-
-@media(max-width:760px) {
-  .search-field {
-    width: 100%
-  }
 }
 
 @media(min-width:1500px) {
@@ -1342,7 +1338,7 @@ form select {
   }
 
   .search-field {
-    max-width: none
+    width: 100%
   }
 
   .product-grid {

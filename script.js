@@ -59,7 +59,7 @@ function changeSlide(direction) {
   const slide = slides[currentSlide];
   photo.src = `imagens/${slide.image}`; photo.alt = slide.alt;
   document.querySelector('#photo-caption').textContent = slide.caption;
-  document.querySelector('#slide-counter').textContent = `${String(currentSlide + 1).padStart(2, '0')} / 03`;
+  document.querySelector('#slide-counter').textContent = `${String(currentSlide + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
 }
 document.querySelector('#slide-prev')?.addEventListener('click', () => changeSlide(-1));
 document.querySelector('#slide-next')?.addEventListener('click', () => changeSlide(1));
@@ -67,11 +67,9 @@ document.querySelector('.hero-visual')?.addEventListener('keydown', event => {
   if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); changeSlide(event.key === 'ArrowLeft' ? -1 : 1); }
 });
 
-// Fotografias de composição ilustram os sabores sem afirmar uma identificação
-// que ainda precisa ser confirmada pelas fundadoras.
 const products = [
-  { name: 'Tradicional', category: 'individuais', price: 7, description: 'Massa tradicional com chocolate meio amargo.', image: 'cookie-recheado-tradicional.jpeg', alt: 'Composição de cookies variados com chocolate e confeitos', tag: 'O clássico · 60 g' },
-  { name: 'Red Velvet', category: 'individuais', price: 7.5, description: 'Massa Red Velvet com chocolate branco.', image: 'cookie-red-velvet-partido.jpeg', alt: 'Cookies vermelhos com pedaços de chocolate branco', tag: '60 g' },
+  { name: 'Tradicional', category: 'individuais', price: 7, description: 'Massa tradicional com chocolate meio amargo.', image: 'cookie-recheado-tradicional.jpeg', alt: 'Cookie tradicional partido ao meio, com pedaços de chocolate', tag: 'O clássico · 60 g' },
+  { name: 'Red Velvet', category: 'individuais', price: 7.5, description: 'Massa Red Velvet com chocolate branco.', image: 'cookie-red-velvet-partido.jpeg', alt: 'Cookie Red Velvet partido ao meio, com pedaços de chocolate branco', tag: '60 g' },
   { name: 'Eclipse', category: 'individuais', price: 7.5, description: 'Massa de cacau com chocolate branco.', image: 'cookies-sortidos-fundo-claro-01.jpeg', alt: 'Composição com cookie de cacau e outros sabores', tag: '60 g' },
   { name: 'M&M', category: 'individuais', price: 7.5, description: 'Massa tradicional com M&M e chocolate meio amargo.', image: 'cookies-com-confeitos-coloridos.jpeg', alt: 'Cookies com confeitos coloridos e pedaços de chocolate', tag: '60 g' },
   { name: 'Nutella', category: 'individuais', price: 9, description: 'Massa tradicional com chocolate meio amargo e recheio de Nutella.', image: 'cookie-recheado-nutella.jpeg', alt: 'Foto ilustrativa de cookie com recheio cremoso de chocolate', tag: 'Recheado · 60 g' },
@@ -92,7 +90,7 @@ function renderProducts() {
   filtered.forEach(product => {
     const card = document.createElement('article'); card.className = 'product-card';
     const imageWrap = document.createElement('div'); imageWrap.className = 'product-image-wrap';
-    const image = document.createElement('img'); image.src = `imagens/${product.image}`; image.alt = product.alt; image.loading = 'lazy'; image.width = 600; image.height = 492;
+    const image = document.createElement('img'); image.width = 600; image.height = 492; image.alt = product.alt; image.loading = 'lazy'; image.src = `imagens/${product.image}`;
     const tag = document.createElement('span'); tag.className = 'product-tag'; tag.textContent = product.tag;
     imageWrap.append(image, tag);
     const title = document.createElement('div'); title.className = 'product-title';
@@ -100,11 +98,12 @@ function renderProducts() {
     const price = document.createElement('span'); price.className = 'product-price'; price.textContent = product.priceLabel || (product.price ? currency.format(product.price) : 'Sob consulta');
     title.append(name, price);
     const description = document.createElement('p'); description.textContent = product.description;
-    const link = document.createElement('a'); link.className = 'text-link'; link.href = '#contato'; link.textContent = 'Quero esse'; link.setAttribute('aria-label', `Consultar ${product.name}`);
+    const link = document.createElement('a'); link.className = 'text-link'; link.href = '#contato'; link.textContent = 'Quero esse'; link.setAttribute('aria-label', `Quero esse: ${product.name}`);
     link.addEventListener('click', () => {
       const form = document.querySelector('#contact-form');
       form.elements.interesse.value = product.category === 'individuais' ? 'Cookies individuais' : product.category === 'mini' ? 'Mini cookies para festas' : 'Cesta de cookies';
-      form.elements.mensagem.value = `Olá, Sampi! Gostaria de saber mais sobre ${product.name}.`;
+      form.elements.mensagem.value = `Gostaria de saber mais sobre ${product.name}.`;
+      clearContactFeedback();
     });
     card.append(imageWrap, title, description, link); catalog.append(card);
   });
@@ -137,7 +136,19 @@ document.querySelectorAll('[data-jump-category]').forEach(link => link.addEventL
 renderProducts();
 
 const whatsappReady = /^55\d{10,11}$/.test(SAMPI_WHATSAPP);
-document.querySelector('#contact-form')?.addEventListener('submit', event => {
+const contactForm = document.querySelector('#contact-form');
+const contactFeedback = document.querySelector('#contact-feedback');
+
+function clearContactFeedback() {
+  if (!contactFeedback) return;
+  contactFeedback.hidden = true;
+  contactFeedback.replaceChildren();
+}
+
+contactForm?.addEventListener('input', clearContactFeedback);
+contactForm?.addEventListener('change', clearContactFeedback);
+
+contactForm?.addEventListener('submit', event => {
   event.preventDefault();
   const form = event.currentTarget;
   const data = new FormData(form);
